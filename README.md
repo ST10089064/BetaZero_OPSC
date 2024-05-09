@@ -1,2 +1,2 @@
-# BetaZero_XISD
-POE for XISD. 
+# BetaZero_OPSC
+POE for OPSC. Part 2 
