@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/topImage"
+                    android:layout_width="411dp"
+                    android:layout_height="165dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/blue_and_orange_wave"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profileImage2"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/batman_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/topImage"
+                    app:layout_constraintEnd_toEndOf="@+id/topImage"
+                    app:layout_constraintStart_toStartOf="@+id/topImage"
+                    app:layout_constraintTop_toBottomOf="@+id/topImage"
+                    app:shapeAppearanceOverlay="@style/circular"
+                    app:strokeWidth="5dp"/>
+
+                <TextView
+                    android:id="@+id/profileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    app:layout_constraintEnd_toEndOf="@+id/profileImage2"
+                    app:layout_constraintStart_toStartOf="@+id/profileImage2"
+                    app:layout_constraintTop_toBottomOf="@+id/profileImage2"
+                    android:layout_marginTop="16dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileName">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/accountUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_background_1"
+                        android:text="Change Name" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/password_change"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_background_1"
+                        android:text="Change password" />
+
+                </LinearLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/cameraFloatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:clickable="true"
+                    android:backgroundTint="@color/orange"
+                    app:layout_constraintBottom_toBottomOf="@+id/profileImage2"
+                    app:layout_constraintEnd_toEndOf="@+id/profileImage2"
+                    app:srcCompat="@drawable/baseline_add_a_photo_24"
+                    android:contentDescription="TODO" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/backFloat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/topImage"
+                    app:layout_constraintTop_toTopOf="@id/topImage"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="@color/orange"
+                    android:clickable="true"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    android:contentDescription="TODO" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
